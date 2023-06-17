@@ -1,6 +1,7 @@
 import tkinter as tk
 import player
 import globals
+import pieces
 
 
 # Create a Tkinter window
@@ -14,15 +15,15 @@ button_frame.pack()
 
 def start_violin():
     button_frame.pack_forget()
-    player.start_piece('img/violin/paganini_caprice-2.png', root)
+    pieces.show_pieces('violin', root)
 
 def start_viola():
     button_frame.pack_forget()
-    player.start_piece('img/viola/Merry_Go_Round-2.png', root)
+    pieces.show_pieces('viola', root)
 
 def start_cello():
     button_frame.pack_forget()
-    player.start_piece('img/cello/Shostakovich_Waltz_No_2-2.png', root)
+    pieces.show_pieces('cello', root)
 
 violin_button = tk.Button(button_frame,
                          text="violin",
