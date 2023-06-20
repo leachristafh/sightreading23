@@ -21,6 +21,7 @@ def instrument_pieces(instrument):
                 'Stück 3',
                 'img/violin/paganini_caprice-2.png'
             )
+
         ]
     elif instrument == 'viola':
         return [
@@ -36,18 +37,48 @@ def instrument_pieces(instrument):
     elif instrument == 'cello':
         return [
             Piece(
-                'Schosta',
+                'Schostakovich Walzer',
                 'img/cello/celloschosta-2.png'
             ),
             Piece(
-                'Stück 2',
-                'img/viola/Merry_Go_Round-2.png'
+                'Canon ',
+                'img/cello/canu.png'
+            ),
+            Piece(
+                'Schindlers List ',
+                'img/cello/schindler.png'
+            ),
+            Piece(
+                'Schindlers  ',
+                'img/cello/schindler.png'
+            ),
+            Piece(
+                'Vivaldi Summer ',
+                'img/cello/vivaldi.png'
+            ),
+            Piece(
+                'Elgar ',
+                'img/cello/elgari.png'
+            ),
+            Piece(
+                'Spirited away ',
+                'img/cello/gibli.png'
+            ),
+            Piece(
+                'Back in Black ',
+                'img/cello/backinblack.png'
             )
         ]
 def show_pieces(instrument, frame):
     button_frame = tk.Frame(frame)
     button_frame.pack()
-
+    # Customize the button appearance
+    button_width = 200
+    button_height = 40
+    button_font = ('Arial', 14)
+    button_bg = '#F0F0F0'
+    button_fg = 'black'
+    button_active_bg = '#CCCCCC'
     for piece in instrument_pieces(instrument):
         name = piece.name
         path = piece.path
